@@ -1,0 +1,26 @@
+{
+  "name": "openai-agent-sdk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lets-code-vinay/OpenAI-Agent-sdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lets-code-vinay/OpenAI-Agent-sdk/issues"
+  },
+  "homepage": "https://github.com/lets-code-vinay/OpenAI-Agent-sdk#readme",
+  "description": "",
+  "dependencies": {
+    "@openai/agents": "^0.11.4",
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
+  }
+}

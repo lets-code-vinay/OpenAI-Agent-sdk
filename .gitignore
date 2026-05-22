@@ -1,0 +1,53 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node / JavaScript
+node_modules/
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vite/
+parcel-cache/
+.cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Environment / secrets
+.env
+.env.*.local
+.env.local
+.env.production
+.env.test
+*.pem
+*.key
+*.crt
+secret.*
+secrets.*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+
+# TypeScript
+*.tsbuildinfo
+
+# Test / coverage
+coverage/
+.nyc_output/
+jest-stare/
+
+# Misc
+.DS_Store
+Thumbs.db
+*.tgz
+*.lock
