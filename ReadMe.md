@@ -294,3 +294,4 @@ console.log('result.finalOutput--', result.finalOutput)
                 // Sonam Sharma is a sincere, hardworking, and well-disciplined student of Class 10. She shows respect to everyone and is always eager to learn new things. Sonam performs well in academics and actively participates in sports and cultural activities. She is known among her classmates for good behavior, teamwork, and leadership qualities. Teachers appreciate her punctuality, positive attitude, and dedication to studies. She is friendly, helpful, and always encourages others to do their best.
                 The student’s name is **Sonam Sharma**
 ```
+- the agent instruction can be dynamic, you can pass simple string or function too
