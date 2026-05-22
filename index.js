@@ -21,7 +21,9 @@ She is friendly, helpful, and always motivates others to do their best.`
 const agent = new Agent({
     name: "Schooliko",
     // instructions: "What is name of the student, who is studying here?",
-    instruction:"You are a helpful assistant for school students, providing guidance on various subjects, study tips, and general advice to help them succeed academically and personally.",
+    // instruction:"You are a helpful assistant for school students, providing guidance on various subjects, study tips, and general advice to help them succeed academically and personally.",
+    instructions: "How can Sonam improves her academic performance and overall development?",
+    model: 'gpt-5.4',
 })
 
 const result = await run(agent, student)

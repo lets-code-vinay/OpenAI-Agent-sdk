@@ -235,9 +235,15 @@ To build agent we can we use SDK(Software development kit) from different provid
 - Go to [API Keys](https://platform.openai.com/settings/organization/api-keys)  
 - Create Secret key - BsfwFPOD1MjLySTrBu3y2IRZ4TltExBQGlZmpIt0d1qz7ziGu00tIT3BlbkFJlbzwHJIT2knh4cwOyX_A9Cd2rq8o-U6NUTaC-mceoMps-RtW1Iktp6s_rrCxOqgz8iMmeNEdkA
 - store this secret key inside .env file with key name OPENAI_API_KEY
+- *Note*-  If OpenAI thinks secret key is leaked then it will delete api key automatically
 - install npm install @openai/agents zod dotenv
 - package.json - script-  "dev": "node --watch index.js" (create index.js file)
 - Add   "type": "module",
+- **Need to remember**
+   - **Instructions** – the system prompt that tells the model who it is and how it should respond.
+   - **Model** – which OpenAI model to call, plus any optional model tuning parameters.
+   - **Tools** – a list of functions or APIs the LLM can invoke to accomplish a task.
+   
 - in `index.js` file
 - imports
 ```import 'dotenv/config'
