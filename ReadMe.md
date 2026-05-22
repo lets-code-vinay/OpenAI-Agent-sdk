@@ -43,7 +43,7 @@ An AI Agent is an AI system that can:
 
 *It is more advanced than a normal chatbot because it can actually perform tasks, not just answer questions.*
 
-`
+```
 User Input
    ↓
 Planner
@@ -55,7 +55,7 @@ Tool execution (API, browser, files)
 Memory update ( Remembers context)
    ↓
 Repeat until done
-`
+```
 
 ## What is Agent Loop?
 - `Think → Act → Observe → Repeat`
@@ -87,8 +87,7 @@ Prevents damage to real system.
 - One agent delegates work to another specialized agent
 Example
 
-Agent | Task
-
+|Agent | Task|
 ---|---
 UI Agent | Frontend
 Backend Agent | APIs
