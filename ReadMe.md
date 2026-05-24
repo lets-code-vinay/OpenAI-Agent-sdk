@@ -413,7 +413,7 @@ description:
 parameters: z.object({
   city: z
     .string()
-    .describe("The name of the city to get the weather information for"),
+    .describe("The name of the city"),
 }),
 execute: async function ({ city }) {
   const weatherUrl = `https://wttr.in/${city.toLowerCase()}?format=%C+%t`;
@@ -439,4 +439,37 @@ console.log(result.finalOutput);
 };
 
 getCurrentWeather(prompt);
+```
+
+→ it will return result as
+
+```
+Current weather in Imphal: Haze, 28°C.
+
+What to do:
+- If going out, wear a mask if haze bothers your breathing.
+- Drink plenty of water.
+- Avoid heavy outdoor exercise if air feels uncomfortable.
+- Drive carefully if visibility is reduced.
+```
+
+→ If you ask multiple queries, it will call tool multiple times
+`const prompt =  "What is the current weather in imphal, Dehradoon, Coimbatore,Surat?";`
+
+- the response would be as follows
+
+```
+Current weather:
+
+- Imphal: Haze, 28°C
+  - What to do: Limit long outdoor exposure if air feels dusty, wear a mask if sensitive, and stay hydrated.
+
+- Dehradun: Sunny, 40°C
+  - What to do: Avoid direct sun in the afternoon, drink plenty of water, wear light clothes, and use sunscreen.
+
+- Coimbatore: Partly cloudy, 32°C
+  - What to do: Good for regular outdoor activity, but keep water handy and expect warm conditions.
+
+- Surat: Sunny, 35°C
+  - What to do: Stay hydrated, wear breathable clothing, and avoid heavy activity during peak afternoon heat.
 ```
