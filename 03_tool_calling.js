@@ -1,8 +1,9 @@
 import 'dotenv/config'
 import {Agent, run, tool} from '@openai/agents'
 import {z} from 'zod'
+import axios from 'axios';
 
-const prompt = 'What is the current weather in Jaipur?'
+const prompt = 'What is the current weather in imphal?'
 
 const weatherTool= tool({
     name: "getWeatherTool",
@@ -11,10 +12,13 @@ const weatherTool= tool({
         city: z.string().describe("The name of the city to get the weather information for")
     }),
     execute: async function({city}){
-        // In a real implementation, you would fetch the weather data from an API based on the city parameter.
-        return `The current weather in ${city} is 32°C with clear skies.`
-    }
+const weatherUrl = `https://wttr.in/${city.toLowerCase()}?format=%C+%t`;
+const response = await axios.get(weatherUrl);
+console.log('------> ',response.data, city);
 
+        // In a real implementation, you would fetch the weather data from an API based on the city parameter.
+        return response.data
+    }
 })
 
 const weatherAgent = new Agent({
