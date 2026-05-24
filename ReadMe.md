@@ -1,38 +1,43 @@
 ## What is prompt?
+
 - Instruction/input given to AI.
 - **Example**
-`Generate React login form`
-**Good Prompt Contains**
+  `Generate React login form`
+  **Good Prompt Contains**
 - Goal
 - Requirements
 - Constraints
 - Expected output
 
 ## What is prompt Engineering?
+
 Designing effective prompts to get better AI outputs.
 **Techniques**
+
 - Role prompting
 - Step-by-step prompting
 - Few-shot examples
 - Structured instructions
 
 ## What is LLM?
+
 An LLM (Large Language Model) is an AI model trained on a massive amount of text data to understand and generate human-like language.
 
-``` Examples include:```
+` Examples include:`
 
-* OpenAI models like GPT
-* Google Gemini
-* Anthropic Claude
-* Meta Llama
+- OpenAI models like GPT
+- Google Gemini
+- Anthropic Claude
+- Meta Llama
 
 ## How LLM works?
+
 - Training : Get trained on huge data.
 - Token Prediction - on the basis of training it predicts the next token (example: word)
-```The capital of Paris is ___``` **France, Germany** 
-
+  `The capital of Paris is ___` **France, Germany**
 
 ## What is Agent?
+
 An AI Agent is an AI system that can:
 
 - understand a goal,
@@ -41,7 +46,7 @@ An AI Agent is an AI system that can:
 - take actions,
 - and complete tasks automatically.
 
-*It is more advanced than a normal chatbot because it can actually perform tasks, not just answer questions.*
+_It is more advanced than a normal chatbot because it can actually perform tasks, not just answer questions._
 
 ```
 User Input
@@ -58,11 +63,14 @@ Repeat until done
 ```
 
 ## What is Agent Loop?
+
 - `Think → Act → Observe → Repeat`
 
 ## Tool of AI agents?
+
 External capabilities used by AI to generate effective response
 **Examples**
+
 - APIs
 - Browser
 - Database
@@ -70,9 +78,11 @@ External capabilities used by AI to generate effective response
 - Terminal commands
 
 ## What is Sandbox Agent?
+
 AI agent working in isolated safe environment.
 
 **Can Do**
+
 - Run commands
 - Edit files
 - Install packages
@@ -81,47 +91,53 @@ AI agent working in isolated safe environment.
 **Benefits**
 Prevents damage to real system.
 
-
 ## What is handsoff/ Agents as Tools?
+
 - in simple langauge taking help from another agent to fullfil the requirement
 - One agent delegates work to another specialized agent
-Example
+  Example
 
-|Agent | Task|
----|---
-UI Agent | Frontend
-Backend Agent | APIs
-Testing Agent | QA
+| Agent         | Task     |
+| ------------- | -------- |
+| UI Agent      | Frontend |
+| Backend Agent | APIs     |
+| Testing Agent | QA       |
 
-`Handoff Meaning` - *Passing tasks between agents*
+`Handoff Meaning` - _Passing tasks between agents_
 
 ## What is Gaurdrail?
+
 Safety and validation rules for AI agents.
 **Prevents**
+
 - Unsafe actions
 - Invalid input
 - Security issues
 - Dangerous commands
 
 ## What is Memory in AI?
+
 Helps agent remember information.
 
 **Type**
 
-| Type | Meaning|
-|------|--------|
-| Short Term | Current Conversation|
-| long Term | Saved Preferences|
-| Vector Memory | Semantic Retreival|
+| Type          | Meaning              |
+| ------------- | -------------------- |
+| Short Term    | Current Conversation |
+| long Term     | Saved Preferences    |
+| Vector Memory | Semantic Retreival   |
 
 ## What is meaning of Semantic Retreival?
+
 Semantic Retrieval is a search technique where AI searches based on the meaning/context of text instead of exact keywords.
-It understands the meaning of query. 
+It understands the meaning of query.
 
 ## What is context?
+
 In AI terms, context is the background information, history, and surrounding data that an AI model uses to understand a specific request and generate an accurate response.
 **Simple brief** Information available to AI during conversation/task.
-*Includes*
+_Includes_
+
 - Previous messages
 - Instructions
 - Files/code
@@ -131,32 +147,39 @@ In AI terms, context is the background information, history, and surrounding dat
 **Better context → better responses**
 
 ### Types of Context in AI
+
 - Conversational Context (The Chat History)
-- External Context (RAG & Tool Use) *codebase, a company database, or live web search results*
-- System Context (Instructions & Persona) -> Background rules, instructions, 
+- External Context (RAG & Tool Use) _codebase, a company database, or live web search results_
+- System Context (Instructions & Persona) -> Background rules, instructions,
 
 ## What is Context Window?
+
 - Memory size AI can process at once
 - Measured in token
-- *Explanation:* The Context Window is the maximum amount of data (measured in "tokens," which are chunks of characters or words) that an AI model can process at one single time.
+- _Explanation:_ The Context Window is the maximum amount of data (measured in "tokens," which are chunks of characters or words) that an AI model can process at one single time.
 - If a model has a small context window, it will quickly "forget" the beginning of a long conversation. If it has a large context window, you can feed it entire books, massive code repositories, or hours of audio, and it can analyze all of it simultaneously because everything fits into its working memory.
 
 ## What is Token?
+
 - Small text pieces processed by LLM
 - Word may contain multiple tokens
-**Example**
-`"ReactJS" → may split into tokens`
+  **Example**
+  `"ReactJS" → may split into tokens`
+
 ## What is RAG (Retrieval-Augmented Generation)?
+
 Technique where AI fetches external data before answering.
 **Benefit**
 
 More accurate and updated responses.
 
 ## What is MCP (Model Context Protocol)
+
 Protocol connecting AI with external systems/tools.
 It connects with external tool and took help from there to accomplish the task if it relevant to that too
 
 **Examples**
+
 - GitHub
 - Figma
 - Postman
@@ -164,15 +187,18 @@ It connects with external tool and took help from there to accomplish the task i
 - Filesystem
 
 ## What is Vector?
+
 Numerical array/list of numbers
 `[0.12, 0.45, 0.91, ...]`
 
 `promt- create a function -> [0.12, 0.77, ...]`
 
 ## What are Embeddings?
+
 Meaningful vector generated by AI
 
 **Used For**
+
 - Semantic search
 - Similarity matching
 - Recommendations
@@ -181,31 +207,38 @@ Meaningful vector generated by AI
 `A vector is a numerical representation, while an embedding is a vector generated by AI that captures semantic meaning of data.`
 
 ## What is Vector Database?
+
 Database storing AI embeddings and vectors for semantic search.
 **Popular DBs**
+
 - Pinecone Pinecone
 - Chroma Chroma
 
 ## Traditional DB vs Vector DB
-| Traditional DB | Vector DB |
-|----------------|-----------|
-|Exact Meaning | Semantic similarity|
-SQL Queries | Similarity search
-Structured Data | AI Embeddings
-Text Search | Meaning search
+
+| Traditional DB  | Vector DB           |
+| --------------- | ------------------- |
+| Exact Meaning   | Semantic similarity |
+| SQL Queries     | Similarity search   |
+| Structured Data | AI Embeddings       |
+| Text Search     | Meaning search      |
 
 ## What is Hallucinations?
+
 When AI generates false information, confidentally false information
 **Solution**
+
 - RAG
 - Guardrails
 - Verification
-- Better prompts 
+- Better prompts
 
 ## Multi-Agent System
+
 Multiple AI agents collaborating together.
 
 **Example**
+
 ```
 Planner Agent
    ↓
@@ -215,55 +248,69 @@ Testing Agent
    ↓
 Deployment Agent
 ```
+
 ## What are sessions?
+
 Sessions: A persistent memory layer for maintaining working context within an agent loop.
 
 ## What is Human in the loop?
+
 Human in the loop: Built-in mechanisms for involving humans across agent runs.
 
 ## What is Tracing?
+
 Tracing: Built-in tracing for visualizing, debugging, and monitoring workflows, with support for the OpenAI suite of evaluation, fine-tuning, and distillation tools.
 
 ---
+
 ---
 
 ## How to build agent
+
 To build agent we can we use SDK(Software development kit) from different provider like openAI, google, Llama
+
+- **Reference Lectures** [Piyush Garg](https://www.youtube.com/watch?v=9Hj55Ycg2fA&list=PLinedj3B30sA-XUqy01s8yrZ0r0QZMpQT)
+
 - Documentation - [OpenAI github documentation](https://openai.github.io/openai-agents-js/)
 - openAI - [https://platform.openai.com/home](https://platform.openai.com/home)
 - Need to purchase some credit min $5
-- Go to [API Keys](https://platform.openai.com/settings/organization/api-keys)  
+- Go to [API Keys](https://platform.openai.com/settings/organization/api-keys)
 - Create Secret key - BsfwFPOD1MjLySTrBu3y2IRZ4TltExBQGlZmpIt0d1qz7ziGu00tIT3BlbkFJlbzwHJIT2knh4cwOyX_A9Cd2rq8o-U6NUTaC-mceoMps-RtW1Iktp6s_rrCxOqgz8iMmeNEdkA
 - store this secret key inside .env file with key name OPENAI_API_KEY
-- *Note*-  If OpenAI thinks secret key is leaked then it will delete api key automatically
+- _Note_- If OpenAI thinks secret key is leaked then it will delete api key automatically
 - install npm install @openai/agents zod dotenv
-- package.json - script-  "dev": "node --watch index.js" (create index.js file)
-- Add   "type": "module",
+- package.json - script- "dev": "node --watch index.js" (create index.js file)
+- Add "type": "module",
 - **Need to remember**
-   - **Instructions** – the system prompt that tells the model who it is and how it should respond.
-   - **Model** – which OpenAI model to call, plus any optional model tuning parameters.
-   - **Tools** – a list of functions or APIs the LLM can invoke to accomplish a task.
-   
-- in `index.js` file
+  - **Instructions** – the system prompt that tells the model who it is and how it should respond.
+  - **Model** – which OpenAI model to call, plus any optional model tuning parameters.
+  - **Tools** – a list of functions or APIs the LLM can invoke to accomplish a task.
+
+### in `index.js` file
+
 - imports
+
 ```import 'dotenv/config'
 import {Agent, run} from '@openai/agents'
 ```
 
 - Create an Agent
+
 ```const helloAgent = new Agent({
     name: "Hello Agent",
     instruction:"You are an agent who says hello world with user name",
 })
 ```
+
 - Run agent with data
-`const helloResult = await run(helloAgent, 'My name is Vinay Maurya')`
+  `const helloResult = await run(helloAgent, 'My name is Vinay Maurya')`
 
 - console and run `node index.js`
+
 ```
 console.log('helloResult.finalOutput--', helloResult.finalOutput)
                 helloResult.finalOutput-- Nice to meet you, Vinay Maurya. How can I help you today?
-console.log('helloResult.output--', helloResult.output) // it will return 
+console.log('helloResult.output--', helloResult.output) // it will return
                         [
                             {
                                 id: 'msg_067edc0827f6bbcf006a104878b384819a8adaca89a0cf590e',
@@ -277,14 +324,15 @@ console.log('helloResult.output--', helloResult.output) // it will return
                         ]
 
 ```
-- Some other example
-```
 
-const student = `Sonam Sharma is a sincere and hardworking student of Class 10. 
-She is well-disciplined, respectful, and always eager to learn new things. 
-Sonam performs well in academics and actively participates in sports and cultural activities. 
-She is known for her good behavior, teamwork, and leadership qualities among classmates. 
-Teachers appreciate her punctuality, positive attitude, and dedication towards studies. 
+### Some other example
+
+```
+const student = `Sonam Sharma is a sincere and hardworking student of Class 10.
+She is well-disciplined, respectful, and always eager to learn new things.
+Sonam performs well in academics and actively participates in sports and cultural activities.
+She is known for her good behavior, teamwork, and leadership qualities among classmates.
+Teachers appreciate her punctuality, positive attitude, and dedication towards studies.
 She is friendly, helpful, and always motivates others to do their best.`
 
 const agent = new Agent({
@@ -299,4 +347,96 @@ console.log('result.finalOutput--', result.finalOutput)
                 // Sonam Sharma is a sincere, hardworking, and well-disciplined student of Class 10. She shows respect to everyone and is always eager to learn new things. Sonam performs well in academics and actively participates in sports and cultural activities. She is known among her classmates for good behavior, teamwork, and leadership qualities. Teachers appreciate her punctuality, positive attitude, and dedication to studies. She is friendly, helpful, and always encourages others to do their best.
                 The student’s name is **Sonam Sharma**
 ```
+
+### Dynamic Agent
+
 - the agent instruction can be dynamic, you can pass simple string or function too
+
+```
+import 'dotenv/config'
+import {Agent, run } from '@openai/agents'
+
+const prompt = 'Hello i am Sonam, i am in college and i wanted to learn AI'
+
+const userQuery = (userInput) => {
+    if(userInput.includes('school')){
+        return "You are mentor you should suggest user to focus on your academics, not on AI"
+    } else {
+        return "You are a senior AI engineer, Help user to build his/her career"
+    }
+}
+
+const aiAgent = new Agent({
+name:'Schooliko',
+instructions: userQuery(prompt),
+
+model:'gpt-5.4'
+
+})
+
+const result = await run(aiAgent, prompt)
+console.log('result.finalOutput--', result.finalOutput)
+```
+
+### Tool calling
+
+- Basically tool are used to perform any specific task and to perform actions. Here we can use external tools like `api, database, web search, file system, Browser automation, terminal`. By help of this agent doesn't only talk, it will perform action too
+- Example if we want to check weather, we can add weather api in tool. and it will return real data
+  - **Flow of Tool calling**
+
+```
+   User Request
+      ↓
+   LLM decides tool needed
+      ↓
+   Tool/API called
+      ↓
+   Tool returns data
+      ↓
+   LLM generates final response
+```
+
+- **Code Example**
+
+```
+import "dotenv/config";
+import { Agent, run, tool } from "@openai/agents";
+import { z } from "zod";
+import axios from "axios";
+
+const prompt = "What is the current weather in imphal?";
+
+const weatherTool = tool({
+name: "getWeatherTool",
+description:
+  "This tool provides current weather information for a given location.",
+parameters: z.object({
+  city: z
+    .string()
+    .describe("The name of the city to get the weather information for"),
+}),
+execute: async function ({ city }) {
+  const weatherUrl = `https://wttr.in/${city.toLowerCase()}?format=%C+%t`;
+  const response = await axios.get(weatherUrl);
+  console.log("------> ", response.data, city);
+
+  // In a real implementation, you would fetch the weather data from an API based on the city parameter.
+  return response.data;
+},
+});
+
+const weatherAgent = new Agent({
+name: "Weather Agent",
+instructions:
+  "You are working in meterogological department, you have access to current weather data. Answer the user's query based on the data you have. also tell user what to do in this condition",
+model: "gpt-5.4",
+tools: [weatherTool],
+});
+
+const getCurrentWeather = async (query = "") => {
+const result = await run(weatherAgent, query);
+console.log(result.finalOutput);
+};
+
+getCurrentWeather(prompt);
+```
