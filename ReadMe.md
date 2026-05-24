@@ -544,3 +544,28 @@ getCurrentWeather(prompt);
   city: 'Imphal'
 }
 ```
+
+## Agent Orchestration
+
+Orchestration refers to the flow of agents in your app. Which agents run, in what order, and how do they decide what happens next? There are two main ways to orchestrate agents:
+
+1. Orchestrating via LLM: _determining the flow of agents via decision of LLM._
+2. Orchestrating via Code: _determining the flow of agents via your code._
+
+### Orchestrating via LLM
+
+An agent is an LLM equipped with instructions, tools and handoffs. This means that given an open-ended task, the LLM can autonomously plan how it will tackle the task, using tools to take actions and acquire data, and using handoffs to delegate tasks to sub-agents. For example, a research agent could be equipped with tools like:
+
+- Web search to find information online
+- File search and retrieval to search through proprietary data and connections
+- Computer use to take actions on a computer
+- Code execution to do data analysis
+- Handoffs to specialized agents that are great at planning, report writing and more.
+
+#### Core SDK patterns
+
+We have 2 patterns _Agents as tool_, and _Handsoff_
+|Pattern | How it works | Best when|
+|------|------|-------|
+Agents as tools |A manager agent keeps control of the conversation and calls specialist agents through _agent.asTool()_. | You want one agent to own the final answer, combine outputs from multiple specialists, or enforce shared guardrails in one place.|
+Handoffs | A triage agent identifies the user’s request and sends it to the most suitable specialist agent. That specialist agent then handles the conversation and gives the final response.|You want the specialist to speak directly to the user, keep prompts focused, or use different instructions/models per specialist.|
