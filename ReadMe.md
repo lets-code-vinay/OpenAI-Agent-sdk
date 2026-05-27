@@ -815,10 +815,15 @@ You can make GuardRail to generate response as per given queries, not to generat
 
 perform checks and validations on user input or agent output. For example, you may run a lightweight model as a guardrail before invoking an expensive model. If the guardrail detects malicious usage, it can trigger an error and stop the costly model from running.
 
-_Two Types of GuardRail_
+_Three Types of GuardRail_
 
-1. Input Guardrail : _For user prompt/query_
-2. Output guardrail : _For Agent generated Response_
+1. _Input Guardrail_ : run only for the first agent in the chain.
+2. _Output guardrail_ : run only for the agent that produces the final output.
+3. _Tool guardrails_ : run on every function-tool invocation, with input guardrails before execution and output guardrails after execution.
+
+### What is TripWire
+
+When a guardrail fails, it signals this via a tripwire. As soon as a tripwire is triggered, the runner throws the corresponding error and halts execution
 
 **Input GuardRail Code example**
 
